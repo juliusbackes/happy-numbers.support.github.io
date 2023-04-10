@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grundrechenarten</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script
+      id="MathJax-script"
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+    ></script>
+  </head>
+
+  <script>
+    const answers_A = {
+      A1: true,
+      A2: true,
+      A3: true,
+      A4: true,
+      A5: true,
+      A6: true,
+    };
+
+    function checkAnswers(answers) {
+      var AntwortSatz = document.getElementById("antwort");
+      let allCorrect = true;
+      for (const id in answers) {
+        const checkbox = document.getElementById(id);
+        if (checkbox.checked !== answers[id]) {
+          allCorrect = false;
+          break;
+        }
+      }
+      if (allCorrect) {
+        AntwortSatz.innerHTML = "Alles richtig gemacht!";
+      } else {
+        AntwortSatz.innerHTML =
+          "Nicht alle Antworten sind richtig. Bitte überprüfen Sie Ihre Antworten.";
+      }
+    }
+  </script>
+
+  <style>
+    table,
+    th,
+    td {
+      border: 1px solid black;
+      font-weight: normal;
+      padding: 5px;
+    }
+  </style>
+
+  <body>
+    <h1>Grundrechenarten</h1>
+    --- Bitte immer nur eine <input type="checkbox" /> auswählen!
+    <h4>2019 MSA ZAP Teil 1 - Aufgabe 1</h4>
+    <p>
+      In Teil 1 sind Taschenrechner und Formelsammlung <b>nicht</b> zugelassen.
+    </p>
+    <table>
+      <tr>
+        <th>a)</th>
+        <th>\( \frac{2}{15} + \frac{3}{4}= \)</th>
+        <th><input type="checkbox" id="A1" /> \( \frac{53}{60} \)</th>
+        <th><input type="checkbox" />\( \frac{5}{19} \)</th>
+        <th><input type="checkbox" />\( \frac{17}{19} \)</th>
+        <th><input type="checkbox" />\( \frac{43}{60} \)</th>
+      </tr>
+      <tr>
+        <th>b)</th>
+        <th>\( 0,05 \cdot 0,02 = \)</th>
+        <th><input type="checkbox" /> \( 0,07 \)</th>
+        <th><input type="checkbox" />\( 0,1 \)</th>
+        <th><input type="checkbox" id="A2" />\( 0,001 \)</th>
+        <th><input type="checkbox" />\( 0,0001 \)</th>
+      </tr>
+      <tr>
+        <th>c)</th>
+        <th>\( 2,6 \cdot 10^5 = \)</th>
+        <th><input type="checkbox" id="A3" /> \( 260000 \)</th>
+        <th><input type="checkbox" />\( 26000 \)</th>
+        <th><input type="checkbox" />\( 2600000 \)</th>
+        <th><input type="checkbox" />\( 0,26 \)</th>
+      </tr>
+      <tr>
+        <th>d)</th>
+        <th>Der Zentralwert (Median) von \( 16; 12; 18; 20; 13; 12\) ist:</th>
+        <th><input type="checkbox" /> \( 12 \)</th>
+        <th><input type="checkbox" id="A4" />\( 14,5 \)</th>
+        <th><input type="checkbox" />\( 18 \)</th>
+        <th><input type="checkbox" />\( 19 \)</th>
+      </tr>
+      <tr>
+        <th>e)</th>
+        <th>\(9,36\)% von \(2500\) € sind:</th>
+        <th><input type="checkbox" /> \( 134 \)€</th>
+        <th><input type="checkbox" id="A5" />\( 234 \)€</th>
+        <th><input type="checkbox" />\( 264 \)€</th>
+        <th><input type="checkbox" />\( 312 \)€</th>
+      </tr>
+      <tr>
+        <th>f)</th>
+        <th>Der Preis sinkt von \(80\) € auf \(50\) €, also um:</th>
+        <th><input type="checkbox" /> \( 30 \)%</th>
+        <th><input type="checkbox" id="A6" />\( 37,5 \)%</th>
+        <th><input type="checkbox" />\( 50 \)%</th>
+        <th><input type="checkbox" />\( 62,5 \)%</th>
+      </tr>
+    </table>
+    <button onclick="checkAnswers(answers_A)">Überprüfen</button>
+    <p id="antwort"></p>
+    <h4>2019 MSA ZAP Teil 1 - Aufgabe 2</h4>
+    <p>
+      In Teil 1 sind Taschenrechner und Formelsammlung <b>nicht</b> zugelassen.
+    </p>
+  </body>
+</html>

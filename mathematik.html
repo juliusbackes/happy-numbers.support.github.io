@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MSA Mathematik</title>
+  </head>
+
+  <style>
+    body {
+      padding: 0;
+      margin: 0;
+      background-color: #040211;
+      color: white;
+      font-family: "SF Pro Display";
+    }
+    header {
+      height: 3.75em;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 2.5px;
+      margin-right: 50px;
+      margin-left: 50px;
+      border-bottom: 0.5px solid rgba(243, 243, 243, 0.1);
+      font-weight: 600;
+      font-size: 17.5px;
+    }
+
+    header div {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+      align-items: center;
+    }
+
+    header div p {
+      padding-left: 15px;
+      padding-right: 15px;
+      font-weight: 300;
+    }
+
+    #h1 {
+      margin: 3.5% 0 3.5% 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-weight: 600;
+      font-size: 25px;
+    }
+
+    .heading {
+      color: unset;
+      text-align: center;
+      font-size: 75px;
+      letter-spacing: -0.02em;
+      font-weight: 500;
+      background: linear-gradient(
+        to right bottom,
+        rgb(255, 255, 255) 30%,
+        rgba(255, 255, 255, 0.38)
+      );
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    #welcome_sign {
+      margin: 0% 25% 0px 25%;
+      font-style: normal;
+      font-weight: 100;
+      font-size: 23px;
+      line-height: 30px;
+    }
+
+    #math_sign {
+      margin: 0 0 10px 0;
+      background: linear-gradient(#4600f3 6.95%, #200d50 97.77%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      font-style: normal;
+      font-weight: 600;
+    }
+
+    p {
+      margin: 0 0 0 0;
+    }
+
+    .themen_card {
+      height: 260px;
+      width: 310px;
+      margin: 5px;
+      background-color: aqua;
+      box-sizing: border-box;
+      background: linear-gradient(
+          234.35deg,
+          rgba(0, 0, 0, 0.2) 3.16%,
+          rgba(80, 10, 255, 0.08) 97.46%
+        ),
+        linear-gradient(
+          125.11deg,
+          rgba(96, 94, 94, 0.4) 0%,
+          rgba(217, 217, 217, 0) 141.19%,
+          rgba(14, 14, 14, 0.2) 141.19%
+        );
+      border: 1px solid rgba(217, 217, 217, 0.25);
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+      border-radius: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: end;
+      cursor: pointer;
+    }
+
+    #themen_container {
+      margin: 7.5% 17.5% 10% 17.5%;
+    }
+
+    #themen {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5 {
+      margin: 0;
+    }
+
+    .themen_card_heading {
+      font-family: "SF Pro Rounded";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 23px;
+      margin: 10px 0 0 10px;
+    }
+
+    .themen_card_subheading {
+      font-family: "SF Pro Rounded";
+      font-style: normal;
+      font-weight: 500;
+      font-size: 15px;
+      color: rgba(255, 255, 255, 0.5);
+      margin: 5px 5px 0 10px;
+    }
+
+    .img_div {
+      display: flex;
+      justify-content: center;
+    }
+    .themen_card_titles {
+      height: 30%;
+      margin: 0 0 12.5px 5px;
+    }
+
+    #ratio_svg {
+      margin: 0 0 27.5px 0;
+    }
+
+    footer {
+      height: 3.75em;
+      display: flex;
+      flex-direction: row-reverse;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 2.5px;
+      margin-right: 50px;
+      margin-left: 50px;
+      border-top: 0.5px solid rgba(243, 243, 243, 0.1);
+      font-weight: 600;
+      font-size: 17.5px;
+    }
+
+    footer div {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+      align-items: center;
+    }
+
+    footer div p {
+      padding-left: 15px;
+      padding-right: 15px;
+      font-weight: 300;
+    }
+  </style>
+
+  <body>
+    <header>
+      <p>MSA Übungen Bremen</p>
+      <div>
+        <p>Aufgaben</p>
+        <p>Termine</p>
+        <p>Was ist der MSA?</p>
+      </div>
+    </header>
+    <div id="h1">
+      <h1 class="heading">Aufgaben</h1>
+    </div>
+
+    <div id="welcome_sign">
+      <p id="math_sign">MATHEMATIK</p>
+      <p>
+        Willkommen auf dem Mathematik-Teil für Schüler:innen, die sich auf ihren
+        mittleren Schulabschluss vorbereiten! Wir haben diese Webseite
+        entwickelt, um Ihnen eine umfassende Sammlung von Lernressourcen und
+        Übungen zu bieten, die Ihnen dabei helfen, Ihre Mathematikkenntnisse zu
+        verbessern. Wir haben alle Themen, der letzten Jahre, in sieben
+        Kategorien aufgeteilt, um Ihnen eine übersichtliche Struktur zu bieten.
+        Wir hoffen, dass Sie diese Webseite als nützliches Werkzeug nutzen und
+        Ihre Mathematikfähigkeiten verbessern werden.
+      </p>
+    </div>
+    <div id="themen_container">
+      <div id="themen">
+        <div class="themen_card">
+          <div class="img_div">
+            <img src="xyz.svg" width="290px" height="100px" />
+          </div>
+          <div class="themen_card_titles">
+            <h1 class="themen_card_heading">􀅺 Grundlagen</h1>
+            <h5 class="themen_card_subheading">
+              Von den Grundrechenarten bis zu Potenzen
+            </h5>
+          </div>
+        </div>
+        <div class="themen_card">
+          <div class="img_div">
+            <img src="geometrie.svg" width="300px" height="140px" />
+          </div>
+          <div class="themen_card_titles">
+            <h1 class="themen_card_heading">􁑡 Geometrie</h1>
+            <h5 class="themen_card_subheading">
+              Von Winkeln bis zum Pythagoras
+            </h5>
+          </div>
+        </div>
+        <div class="themen_card">
+          <div class="img_div">
+            <img src="eq.svg" width="290px" height="100px" />
+          </div>
+          <div class="themen_card_titles">
+            <h1 class="themen_card_heading">􀁕 Gleichungen & Terme</h1>
+            <h5 class="themen_card_subheading">
+              Von Variablen bis zu linearen Gleichungssystemen
+            </h5>
+          </div>
+        </div>
+        <div class="themen_card">
+          <div class="img_div">
+            <img src="fx.svg" width="300px" height="140px" />
+          </div>
+          <div class="themen_card_titles">
+            <h1 class="themen_card_heading">􀅮 Funktionen</h1>
+            <h5 class="themen_card_subheading">
+              Von den linearen bis zu e-Funktionen
+            </h5>
+          </div>
+        </div>
+        <div class="themen_card">
+          <div class="img_div">
+            <img src="stochastik.svg" width="300px" height="140px" />
+          </div>
+          <div class="themen_card_titles">
+            <h1 class="themen_card_heading">􀘽 Statistik & Stochastik</h1>
+            <h5 class="themen_card_subheading">
+              Vom Durchschnitt bis zu La-Place-Ereignissen
+            </h5>
+          </div>
+        </div>
+        <div class="themen_card">
+          <div class="img_div">
+            <img id="ratio_svg" src="ratio.svg" width="225px" height="70px" />
+          </div>
+          <div class="themen_card_titles">
+            <h1 class="themen_card_heading">􀘾 Prozente & Anteile</h1>
+            <h5 class="themen_card_subheading">
+              Von Zinsrechnung bis zu Gerechtes Aufteilen
+            </h5>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <div>
+        <p>Kontakt</p>
+        <p>Impressum</p>
+      </div>
+    </footer>
+  </body>
+</html>
